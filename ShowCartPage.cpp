@@ -19,14 +19,14 @@ void MainWindow::updateProductInCart(){
 
     }
     window->setLayout(gridLayout);
-    qDebug() << theAllPrice;
+
 
     //ui->price_All_label->setText("price : " + QString::number(theAllPrice));
 
 
 
     ui->productInCartScrollArea->setWidget(window);
-    qDebug()<< "update cart";
+
 }
 
 void MainWindow::on_CartMenuPushButton_clicked()
@@ -47,7 +47,7 @@ bool MainWindow::isValidIranianPhoneNumber(const QString &phoneNumber)
 
 void MainWindow::on_checkBox_stateChanged(int arg1)
 {
-    qDebug() << arg1;
+
     if (arg1 == 2){
         ui->customerIdWidget->hide();
         ui->customerInformationWidget->show();
@@ -88,7 +88,7 @@ void MainWindow::on_pushButton_clicked()
         } else {
             isValid = false;
             ui->customer_lastName_label->setStyleSheet("color: rgb(255,0,0);");
-            qDebug() << "lo";
+
         }
         if (isValidIranianPhoneNumber(ui->customer_phoneNumber_lineEdit->text())) {
             order->customer.phone_number = ui->customer_phoneNumber_lineEdit->text();

@@ -21,8 +21,8 @@ struct OrderInformation {
   QVector<ProductInformation> products;
   QVector<int> quantity;
   QVector<int> prices;
-  int discount;
-  QString order_date;
+  int discount = 0;
+  QString order_date = "";
   CustomerInformation customer;
 };
 

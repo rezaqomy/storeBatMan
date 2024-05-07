@@ -10,9 +10,9 @@
 
 struct CustomerInformation{
     int id = -1;
-    QString firs_name;
-    QString Last_name;
-    QString phone_number;
+    QString firs_name = "";
+    QString Last_name = "";
+    QString phone_number = "";
 };
 
 

@@ -15,7 +15,7 @@ int Customer::addCustomer(CustomerInformation* cusInfo){
 
     query.prepare(insertQuery);
     query.bindValue(":first_name", cusInfo->firs_name);
-    qDebug() << cusInfo->firs_name;
+
     query.bindValue(":last_name", cusInfo->Last_name);
     query.bindValue(":phone_number", cusInfo->phone_number);
 
@@ -35,7 +35,7 @@ int Customer::addCustomer(CustomerInformation* cusInfo){
 
 CustomerInformation Customer::getCustomer(int id) {
     CustomerInformation cusInfo;
-    qDebug() << "ok";
+
     QString selectQuery = "SELECT * FROM customer WHERE id_customer = %1";
     query.exec(selectQuery.arg(id));
 

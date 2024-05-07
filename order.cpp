@@ -16,7 +16,6 @@ int Order::addOrder(OrderInformation* ordInfo) {
     query.bindValue(":quantity", vectorToQString(ordInfo->quantity));
     query.bindValue(":prices", vectorToQStringPrice(ordInfo->products));
     query.bindValue(":discount", QString::number(ordInfo->discount));
-    qDebug() << ordInfo->discount;
     query.bindValue(":order_date", ordInfo->order_date);
     query.bindValue(":id_customer", ordInfo->customer.id);
 
