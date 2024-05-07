@@ -188,8 +188,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>871</width>
-             <height>362</height>
+             <width>66</width>
+             <height>16</height>
             </rect>
            </property>
           </widget>
@@ -300,11 +300,19 @@
 	background-color: rgb(220, 214, 247);
 	border-radius:50px;
 }
-</string>
+QLineEdit{
+	border-radius:15px;
+}
+QLabel{
+	color:white;
+}</string>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_5">
             <item>
              <widget class="QSplitter" name="splitter_2">
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
               <property name="orientation">
                <enum>Qt::Vertical</enum>
               </property>
@@ -352,6 +360,12 @@ border-radius:50px;</string>
                   </item>
                   <item>
                    <widget class="QPushButton" name="pushButton_4">
+                    <property name="styleSheet">
+                     <string notr="true">background-color: rgb(220, 214, 247);
+color:black;
+padding: 4px 8px;
+border-radius:16px;</string>
+                    </property>
                     <property name="text">
                      <string>refresh</string>
                     </property>
@@ -374,6 +388,9 @@ border-radius:50px;</string>
                 </item>
                 <item>
                  <widget class="QCheckBox" name="checkBox">
+                  <property name="styleSheet">
+                   <string notr="true">color:white;</string>
+                  </property>
                   <property name="text">
                    <string>CheckBox</string>
                   </property>
@@ -664,7 +681,10 @@ QLineEdit{
                   <item>
                    <widget class="QPushButton" name="pushButton">
                     <property name="styleSheet">
-                     <string notr="true">background-color: rgb(220, 214, 247);</string>
+                     <string notr="true">background-color: rgb(220, 214, 247);
+color:black;
+padding: 4px 8px;
+border-radius:16px;</string>
                     </property>
                     <property name="text">
                      <string>confrim</string>

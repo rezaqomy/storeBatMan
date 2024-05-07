@@ -28,43 +28,6 @@
     </spacer>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
-     <item>
-      <spacer name="horizontalSpacer_3">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-     <item>
-      <widget class="QLabel" name="TitleProductLabel">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <spacer name="horizontalSpacer_4">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <property name="sizeHint" stdset="0">
-        <size>
-         <width>40</width>
-         <height>20</height>
-        </size>
-       </property>
-      </spacer>
-     </item>
-    </layout>
-   </item>
-   <item>
     <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
       <spacer name="horizontalSpacer_5">
@@ -81,6 +44,14 @@
      </item>
      <item>
       <widget class="QWidget" name="widget" native="true">
+       <property name="styleSheet">
+        <string notr="true">QLabel{
+	color:black;
+}
+QLineEdit{
+	backgroud-color:white;
+}</string>
+       </property>
        <layout class="QVBoxLayout" name="verticalLayout">
         <item>
          <widget class="QLabel" name="name_label">
@@ -147,6 +118,12 @@
      </item>
      <item>
       <widget class="QPushButton" name="ConfrimPushButton">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(220, 214, 247);
+color:black;
+padding: 4px 8px;
+border-radius:16px;</string>
+       </property>
        <property name="text">
         <string>confrim product</string>
        </property>
