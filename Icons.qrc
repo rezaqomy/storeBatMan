@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Icons/Buying 2.png</file>
+        <file>Icons/Cash Register 2.png</file>
+        <file>Icons/Coupon 2.png</file>
+        <file>Icons/EDC Machine 2.png</file>
+        <file>Icons/Search Product 2.png</file>
+        <file>Icons/Shopping Basket 2.png</file>
+        <file>Icons/Shopping Bill 2.png</file>
+        <file>Icons/Shopping Cart 2.png</file>
+        <file>Icons/Warehouse 2.png</file>
+    </qresource>
+</RCC>
