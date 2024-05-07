@@ -1,7 +1,7 @@
 #include "ordercard.h"
 
-OrderCard::OrderCard(OrderInformation *order)
-{
+OrderCard::OrderCard(OrderInformation *order){
+    this->order = *order;
     id->setText("order id: " + QString::number(order->id_order));
     id->setStyleSheet("background-color: rgb(120, 140, 102);");
     int price {};
@@ -16,6 +16,7 @@ OrderCard::OrderCard(OrderInformation *order)
     customerName->setStyleSheet("background-color: rgb(20, 214, 220);");
     moreInforamtionPushButton->setText("...");
     moreInforamtionPushButton->setMaximumWidth(50);
+    connect(moreInforamtionPushButton, &QPushButton::clicked, this, &OrderCard::on_moreInformationclicked);
 
 
     qHBoxLayout->addWidget(id);
@@ -30,4 +31,11 @@ OrderCard::OrderCard(OrderInformation *order)
     setMaximumHeight(50);
     setLayout(qHBoxLayout);
 
+}
+
+void OrderCard::on_moreInformationclicked()
+{
+    qDebug() << order.id_order;
+    ShowOrderMoreInformation* show = new ShowOrderMoreInformation(&order);
+    show->show();
 }

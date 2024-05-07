@@ -21,7 +21,8 @@ SOURCES += \
     order.cpp \
     ordercard.cpp \
     product.cpp \
-    productcard.cpp
+    productcard.cpp \
+    showordermoreinformation.cpp
 
 HEADERS += \
     addprudoctviewer.h \
@@ -32,11 +33,13 @@ HEADERS += \
     order.h \
     ordercard.h \
     product.h \
-    productcard.h
+    productcard.h \
+    showordermoreinformation.h
 
 FORMS += \
     addprudoctviewer.ui \
-    mainwindow.ui
+    mainwindow.ui \
+    showordermoreinformation.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -34,7 +34,6 @@ void MainWindow::on_AllOrdersMenuPushButton_clicked()
 
     for (int i{}; i < orders.size(); i++) {
         OrderCard* orderCard = new OrderCard(&orders[i]);
-        qDebug() << "ok";
         gridLayout->addWidget(orderCard, i, 0);
     }
     window->setLayout(gridLayout);

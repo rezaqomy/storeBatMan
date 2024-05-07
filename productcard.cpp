@@ -40,7 +40,6 @@ void ProductCard::onChangedSpinBox(int newValue)
         if (index == -1) {
             order->products.push_back(product);
 
-            qDebug() << "ok" << index << newValue;
             order->quantity.push_back(newValue);
 
         } else {
