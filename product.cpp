@@ -167,7 +167,7 @@ ProductInformation Product::getProduct(int id){
 bool Product::updateValues(ProductInformation* prinfo){
 
     QString insertQuery = "UPDATE product SET product_name = :Nproduct_name, price = :Nprice, quantity = :Nquantity WHERE id_product = %1 ";
-
+    qDebug() << "ok";
 
     query.prepare(insertQuery.arg(prinfo->id));
     query.bindValue(":Nproduct_name", prinfo->productName);

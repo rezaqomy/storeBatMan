@@ -24,7 +24,7 @@ void MainWindow::updateProductShow()
 
     window->setWindowTitle("Product List");
     for (int i = 0; i < prsInfo.size(); ++i) {
-        ProductCard* productCard = new ProductCard(prsInfo[i], order);
+        ProductCard* productCard = new ProductCard(prsInfo[i],product, order);
         productCard->setStyleSheet("background-color: rgb(244, 238, 255);");
 
         gridLayout->addWidget(productCard, i / 3, i % 3);

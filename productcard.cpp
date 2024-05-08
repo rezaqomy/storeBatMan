@@ -1,9 +1,13 @@
 #include "productcard.h"
 
-ProductCard::ProductCard(ProductInformation product, OrderInformation* order): product(product), order(order)
+ProductCard::ProductCard(ProductInformation product,Product* productRepo, OrderInformation* order): product(product),productRepo(productRepo), order(order)
 {
     int index = Order::findProductIndex(order, product.id);
     product_name = new QLabel("product name : " + product.productName);
+    edit_product->setText("edit");
+    connect(edit_product, &QPushButton::clicked, this, &ProductCard::on_edit_clidked);
+
+
     product_id->setText("id : " + QString::number(product.id));
     product_quantity->setText("quantity : " + QString::number(product.quantity));
     product_price->setText("price : " + QString::number(product.price));
@@ -15,7 +19,8 @@ ProductCard::ProductCard(ProductInformation product, OrderInformation* order): p
     }
 
     QGridLayout* layout = new QGridLayout;
-    layout->addWidget(product_name, 0, 0, 1, 4);
+    layout->addWidget(product_name, 0, 0, 1, 3);
+    layout->addWidget(edit_product, 0, 3, 1, 1);
     layout->addWidget(product_id, 1, 0, 1, 2);
     layout->addWidget(product_quantity, 1, 2, 1, 2);
     layout->addWidget(product_price, 2, 0, 1, 4);
@@ -48,4 +53,18 @@ void ProductCard::onChangedSpinBox(int newValue)
     }
     all_price->setText(QString::number(product.price * newValue));
 
+}
+
+void ProductCard::productEdited(ProductInformation* pro)
+{
+    qDebug() << pro->price << pro->quantity;
+
+    productRepo->updateValues(pro);
+}
+
+void ProductCard::on_edit_clidked()
+{
+    AddPrudoctViewer* editView = new AddPrudoctViewer(product);
+    connect(editView, &AddPrudoctViewer::sendProductEdited, this, &ProductCard::productEdited);
+    editView->show();
 }

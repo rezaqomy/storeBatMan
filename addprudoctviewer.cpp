@@ -60,6 +60,8 @@ void AddPrudoctViewer::on_ConfrimPushButton_clicked()
 
     if (product.id == -1) {
         emit sendProductAded(&product);
+    } else {
+        emit sendProductEdited(&product);
     }
     }
 }

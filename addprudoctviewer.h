@@ -28,6 +28,7 @@ private:
 
 Q_SIGNALS:
     ProductInformation sendProductAded(ProductInformation* productInfo);
+    ProductInformation sendProductEdited(ProductInformation* productInfo);
 };
 
 #endif // ADDPRUDOCTVIEWER_H

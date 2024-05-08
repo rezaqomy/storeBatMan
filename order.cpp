@@ -39,16 +39,19 @@ int Order::findProductIndex(OrderInformation *order, int id)
     return -1;
 }
 
-QVector<OrderInformation> Order::getAllOrders()
+QVector<OrderInformation> Order::getOredersByTime(QString first, QString seccond)
 {
-    Customer customer(db);
+    query.exec(QString("SELECT * FROM orders WHERE order_date >= '%1' AND order_date <= '%2'").arg(first).arg(seccond));
+
+    QVector<OrderInformation> orders = getOrders();
+    return orders;
+}
+
+QVector<OrderInformation> Order::getOrders()
+{
     QVector<OrderInformation> allOrder;
 
-    QString selectQuery = QString("SELECT * FROM orders");
-
-
-    query.exec(selectQuery);
-
+    Customer customer(db);
     while (query.next()) {
         OrderInformation orderInfo;
         orderInfo.id_order = query.value(0).toInt();
@@ -70,6 +73,21 @@ QVector<OrderInformation> Order::getAllOrders()
 
 
     }
+
+    if (!query.exec()) {
+        qCritical() << "Orders: Error get orders to database:" << query.lastError().text();
+    }
+    return allOrder;
+}
+
+QVector<OrderInformation> Order::getAllOrders()
+{
+
+    QString selectQuery = QString("SELECT * FROM orders");
+    query.exec(selectQuery);
+
+    QVector<OrderInformation> allOrder = getOrders();
+
     return allOrder;
 }
 

@@ -12,7 +12,7 @@ void MainWindow::updateProductInCart(){
     window->setWindowTitle("Product List");
     for (int i = 0; i < prsInfo.size(); ++i) {
         theAllPrice += order->products[i].price * order->quantity[i];
-        ProductCard* productCard = new ProductCard(prsInfo[i], order);
+        ProductCard* productCard = new ProductCard(prsInfo[i],product, order);
         productCard->setStyleSheet("background-color: rgb(244, 238, 255);");
         //connect(productCard ,&ProductCard::updateTheScreen, this, &MainWindow::updateProductInCart);
         gridLayout->addWidget(productCard, i / 3, i % 3);
@@ -136,7 +136,7 @@ void MainWindow::on_pushButton_clicked()
         int result = msgBox.exec();
         if (result == QMessageBox::Yes){
             order->discount = discount;
-            order->order_date = "2024-1-1";
+            order->order_date = QDate::currentDate().toString("yyyy-MM-dd");
             if (order->customer.id == -1){
                 order->customer.id = custmerRepoitory->addCustomer(&order->customer);
             }
@@ -153,6 +153,7 @@ void MainWindow::on_pushButton_clicked()
             ui->customer_phoneNumber_lineEdit->setText("");
             ui->customer_id_lineEdit->setText("");
             ui->discount_lineEdit->setText("");
+            updateProductInCart();
 
         }
     }
@@ -162,3 +163,5 @@ void MainWindow::on_pushButton_4_clicked()
 {
     updateProductInCart();
 }
+
+

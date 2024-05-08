@@ -36,7 +36,7 @@
        <string notr="true"/>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="showProductPage">
        <property name="enabled">
@@ -188,8 +188,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>66</width>
-             <height>16</height>
+             <width>871</width>
+             <height>362</height>
             </rect>
            </property>
           </widget>
@@ -782,8 +782,8 @@ border-radius:16px;</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>98</width>
-             <height>28</height>
+             <width>871</width>
+             <height>362</height>
             </rect>
            </property>
           </widget>
@@ -844,17 +844,144 @@ border-radius:16px;</string>
             <property name="minimumSize">
              <size>
               <width>300</width>
-              <height>0</height>
+              <height>255</height>
              </size>
             </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_20">
+             <item>
+              <layout class="QGridLayout" name="gridLayout"/>
+             </item>
+             <item>
+              <widget class="QWidget" name="widget_5" native="true">
+               <property name="maximumSize">
+                <size>
+                 <width>300</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <layout class="QVBoxLayout" name="verticalLayout_15">
+                <item>
+                 <spacer name="verticalSpacer_3">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>57</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QWidget" name="widget_6" native="true">
+                  <layout class="QVBoxLayout" name="verticalLayout_14">
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_21">
+                     <item>
+                      <widget class="QLabel" name="label_2">
+                       <property name="text">
+                        <string>The All price: </string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="allPrce_label">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_25">
+                     <item>
+                      <widget class="QLabel" name="label_14">
+                       <property name="text">
+                        <string>The All discount: </string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="theAllDiscount_label">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_24">
+                     <item>
+                      <widget class="QLabel" name="label_8">
+                       <property name="text">
+                        <string>The All final Price: </string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLabel" name="theAllFinal_label">
+                       <property name="text">
+                        <string/>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="verticalSpacer_4">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>57</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_19">
+          <item>
+           <widget class="QScrollArea" name="timeOrder_scrollArea">
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents_4">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>563</width>
+               <height>163</height>
+              </rect>
+             </property>
+            </widget>
            </widget>
           </item>
           <item>
            <widget class="QWidget" name="widget_8" native="true">
+            <property name="maximumSize">
+             <size>
+              <width>300</width>
+              <height>16777215</height>
+             </size>
+            </property>
             <layout class="QVBoxLayout" name="verticalLayout_12">
-             <item>
-              <widget class="QCalendarWidget" name="calendarWidget"/>
-             </item>
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_16">
                <item>
@@ -939,23 +1066,6 @@ border-radius:16px;</string>
            </widget>
           </item>
          </layout>
-        </item>
-        <item>
-         <widget class="QScrollArea" name="scrollArea_3">
-          <property name="widgetResizable">
-           <bool>true</bool>
-          </property>
-          <widget class="QWidget" name="scrollAreaWidgetContents_4">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>0</y>
-             <width>98</width>
-             <height>28</height>
-            </rect>
-           </property>
-          </widget>
-         </widget>
         </item>
        </layout>
       </widget>
@@ -1079,8 +1189,8 @@ border-radius:16px;</string>
               </property>
               <property name="iconSize">
                <size>
-                <width>150</width>
-                <height>150</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
              </widget>
@@ -1121,8 +1231,8 @@ border-radius:16px;</string>
               </property>
               <property name="iconSize">
                <size>
-                <width>150</width>
-                <height>150</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
              </widget>
@@ -1163,8 +1273,8 @@ border-radius:16px;</string>
               </property>
               <property name="iconSize">
                <size>
-                <width>150</width>
-                <height>150</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
              </widget>
@@ -1205,8 +1315,8 @@ border-radius:16px;</string>
               </property>
               <property name="iconSize">
                <size>
-                <width>150</width>
-                <height>150</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
              </widget>

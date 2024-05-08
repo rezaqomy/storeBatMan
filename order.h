@@ -43,12 +43,14 @@ private:
     QVector<int> quantityJsonToVector(QString* json);
     QVector<int> pricesJsonToVector(QString* json);
     
+    QVector<OrderInformation> getOrders();
+    
 public:
     Order(QSqlDatabase* db);
     int addOrder(OrderInformation* ordInfo);
     static int findProductIndex(OrderInformation* order, int id);
     QVector<OrderInformation> getCustomerOrders(int customer_id);
-    QVector<OrderInformation> getOredersLastMonth();
+    QVector<OrderInformation> getOredersByTime(QString fist, QString seccond);
     QVector<OrderInformation> getAllOrders();
 };
 
